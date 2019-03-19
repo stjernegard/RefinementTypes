@@ -1,5 +1,5 @@
 import XCTest
-@testable import RefinementTypes
+import RefinementTypes
 
 final class RefinementTypesTests: XCTestCase {
     func testBooleanRefinementOperators() throws {
@@ -13,8 +13,4 @@ final class RefinementTypesTests: XCTestCase {
         XCTAssertEqual(Refined<Not<Or<Fail, Succeed>>>("")?.wrapped,
                        nil)
     }
-
-    static var allTests = [
-        ("testBooleanRefinementOperators", testBooleanRefinementOperators)
-    ]
 }

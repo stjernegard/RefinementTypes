@@ -1,10 +1,22 @@
 import XCTest
 
+extension NumericRefinementTests {
+    static let __allTests = [
+        ("testCombinedConstraints", testCombinedConstraints),
+    ]
+}
+
+extension RefinementTypesTests {
+    static let __allTests = [
+        ("testBooleanRefinementOperators", testBooleanRefinementOperators),
+    ]
+}
+
 #if !os(macOS)
-public func allTests() -> [XCTestCaseEntry] {
+public func __allTests() -> [XCTestCaseEntry] {
     return [
-        testCase(RefinementTypesTests.allTests),
-        testCase(NumericRefinementTests.allTests)
+        testCase(NumericRefinementTests.__allTests),
+        testCase(RefinementTypesTests.__allTests),
     ]
 }
 #endif

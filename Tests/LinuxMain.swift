@@ -3,6 +3,6 @@ import XCTest
 import RefinementTypesTests
 
 var tests = [XCTestCaseEntry]()
-tests += RefinementTypesTests.allTests()
-tests += NumericRefinementTests.allTests()
+tests += RefinementTypesTests.__allTests()
+
 XCTMain(tests)
